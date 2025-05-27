@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/2044/problem/C
+
 #include<iostream>
 using namespace std;
 
@@ -10,7 +12,7 @@ void solve(){
     ans+=min(rem,c);
     cout<<ans<<endl;
 }
-        
+
 int main(){
     int n;
     cin>>n;
