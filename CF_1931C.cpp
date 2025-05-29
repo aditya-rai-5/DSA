@@ -1,40 +1,44 @@
-#include<iostream>
+// https://codeforces.com/contest/1931/problem/C
 
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int make_equal(int arr[], int size){
-    for(int i=0;i<size;i++){
-        if(arr[0]!=arr[size-1]){
-            if(arr[0]==arr[i]){
-                return size-i-1;
-            }
-        }
-        else if(arr[i]!=arr[size-i-1]&& (size%2)==0 && i!=0){
-            return size-2*i;
-        }
-        else if (arr[i]!=arr[size-i-1]&& (size%2)==1 && i!=0){
-            return size-2*i-1;
-        }
-        else{
-            continue;
-        }
+void solve() {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
     }
-    return 0;
+
+    int i1 = 0, i2 = 0;
+
+    while (i1 < n && a[i1] == a[0]) {
+        ++i1;
+    }
+
+    while (i2 < n && a[n - i2 - 1] == a[n - 1]) {
+        ++i2;
+    }
+
+    int res = n;
+    if (a[0] == a[n - 1]) {
+        res -= i1;
+        res -= i2;
+    } else {
+        res -= max(i1, i2);
+    }
+
+    cout << max(0, res) << endl;
 }
 
-int main(){
-    int n;
-    cin>>n;
-
-    while(n--){
-        int m;
-        cin>>m;
-        int arr[m];
-        for(int i=0;i<m;i++){
-            cin>>arr[i];
-        }
-        int size=sizeof(arr)/sizeof(arr[0]);
-        cout<<make_equal(arr,size)<<endl;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
     }
     return 0;
 }

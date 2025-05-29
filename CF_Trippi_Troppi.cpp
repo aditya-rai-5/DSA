@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/2094/problem/A
+
 #include<iostream>
 #include<string>
 

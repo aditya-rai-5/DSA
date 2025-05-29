@@ -62,7 +62,8 @@
     "ostream": "cpp",
     "string": "cpp",
     "forward_list": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "algorithm": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
