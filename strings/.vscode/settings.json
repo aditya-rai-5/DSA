@@ -56,9 +56,5 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "files.associations": {
-    "iostream": "cpp",
-    "new": "cpp",
-    "vector": "cpp"
-  }
+  "C_Cpp.errorSquiggles": "disabled"
 }
