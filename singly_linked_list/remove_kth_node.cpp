@@ -18,7 +18,6 @@ Node* remove_kth_ele(Node* head, int k){
     int n=0;
     Node* curr=head;
     Node* prev=nullptr;
-
     while (curr!=nullptr)
     {
         n++;
